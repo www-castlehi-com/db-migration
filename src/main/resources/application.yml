@@ -1,17 +1,14 @@
 spring:
   datasource:
-    url: jdbc:h2:file:./h2/db-migration;AUTO_SERVER=TRUE
+    url: jdbc:h2:file:./h2/liquibase;AUTO_SERVER=TRUE
     driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
     hibernate:
       ddl-auto: none
-  sql:
-    init:
-      mode: always
-      schema-locations: classpath:db/h2/schema.sql
-      data-locations: classpath:db/h2/data.sql
+  liquibase:
+    change-log: classpath:db/liquibase/db.changelog-master.yaml
   h2:
     console:
       enabled: true
