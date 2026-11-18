@@ -1,0 +1,7 @@
+--liquibase formatted sql
+
+--changeset seongha:wrong-loan
+INSERT INTO LOAN (BOOK_ID, MEMBER_ID, DUE_AT)
+VALUES (2, 2, DATEADD('DAY', 14, CURRENT_TIMESTAMP));   -- 정상
+INSERT INTO LOAN (BOOK_ID, MEMBER_ID, DUE_AT)
+VALUES (3, 1, DATEADD('DAY', 14, CURRENT_TIMESTAMP)); -- FK 위반

@@ -8,3 +8,15 @@ databaseChangeLog:
   - include:
       file: changes/003-insert-seed-data.sql
       relativeToChangelogFile: true
+  - include:
+      file: changes/004-create-loan.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/005-insert-loan-data.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/006-wrong-loan.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/007-partial-fail.sql
+      relativeToChangelogFile: true
