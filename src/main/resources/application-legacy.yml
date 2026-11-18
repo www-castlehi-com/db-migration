@@ -1,0 +1,13 @@
+spring:
+  datasource:
+    url: jdbc:h2:file:./h2/legacy;AUTO_SERVER=TRUE
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
+    baseline-version: 1
+  jpa:
+    hibernate:
+      ddl-auto: none
+  h2:
+    console:
+      enabled: true
