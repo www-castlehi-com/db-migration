@@ -1,6 +1,7 @@
 spring:
   datasource:
-    url: jdbc:h2:file:./build/db-migration;AUTO_SERVER=TRUE
+    url: jdbc:h2:file:./h2/db-migration;AUTO_SERVER=TRUE
+    driver-class-name: org.h2.Driver
     username: sa
     password:
   jpa:
@@ -8,7 +9,7 @@ spring:
       ddl-auto: none
   sql:
     init:
-      mode: never
+      mode: always
       schema-locations: classpath:db/h2/schema.sql
       data-locations: classpath:db/h2/data.sql
   h2:
