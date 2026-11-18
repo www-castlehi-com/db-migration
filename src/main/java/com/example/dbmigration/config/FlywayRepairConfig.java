@@ -7,11 +7,11 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class FlywayRepairConfig {
 
-	@Bean
-	FlywayMigrationStrategy repairThenMigrate() {
-		return flyway -> {
-			flyway.repair();
-			flyway.migrate();
-		};
-	}
+	// @Bean
+	// FlywayMigrationStrategy repairThenMigrate() {
+	// 	return flyway -> {
+	// 		flyway.repair();
+	// 		flyway.migrate();
+	// 	};
+	// }
 }
