@@ -1,0 +1,10 @@
+--liquibase formatted sql
+
+--changeset seongha:create-member
+CREATE TABLE MEMBER
+(
+    ID         BIGINT AUTO_INCREMENT PRIMARY KEY,
+    NAME       VARCHAR(100) NOT NULL,
+    EMAIL      VARCHAR(255) NOT NULL UNIQUE,
+    CREATED_AT TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
+);

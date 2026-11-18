@@ -18,6 +18,9 @@ CREATE TABLE IF NOT EXISTS BOOK
     CREATED_AT TIMESTAMP    NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
+--changeset seongha:create-index-book-title
+CREATE INDEX IDX_BOOK_TITLE ON BOOK (TITLE);
+
 --changeset seongha:insert-category-seed
 INSERT INTO CATEGORY (CODE, NAME, DISPLAY_ORDER)
 VALUES ('NOVEL', '소설', 1);

@@ -2,3 +2,9 @@ databaseChangeLog:
   - include:
       file: changes/001-init.sql
       relativeToChangelogFile: true
+  - include:
+      file: changes/002-create-member.sql
+      relativeToChangelogFile: true
+  - include:
+      file: changes/003-insert-seed-data.sql
+      relativeToChangelogFile: true
